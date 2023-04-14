@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/style.css">
     <script src="https://kit.fontawesome.com/9510621c2f.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,11 +25,11 @@
                   <h2>Contact Us</h2>
                   <br>
                   <div class="column">
-                    <form action="/action_page.php">
+                    <form action="/submit" method="post" novalidate>
                       <label for="fname">First Name</label><br>
-                      <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name.." autocomplete="off"><br>
                       <label for="lname">Last Name</label><br>
-                      <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name.." autocomplete="off"><br>
                       <label for="country">Country</label><br>
                       <select id="country" name="country">
                         <option value="india">India</option>
@@ -37,12 +37,20 @@
                         <option value="usa">USA</option>
                       </select><br>
                       <label for="subject">Subject</label><br>
-                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea><br>
+                      <textarea id="subject" name="subject" placeholder="Write something.."autocomplete="off" style="height:170px"></textarea><br>
                       <input type="submit" value="Submit"><br>
                     </form>
                   </div>
                 </div>
         </div>
     </div>
+    <script>
+      const form = document.getElementById('form');
+form.addEventListener('submit', (event) => {
+ 
+  event.preventDefault();
+  
+});
+    </script>
 </body>
 </html>

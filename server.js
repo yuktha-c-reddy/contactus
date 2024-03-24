@@ -9,7 +9,7 @@ let firstnamevalue , lastnamevalue , countryvalue , subjectvalue;
 const con = mysql.createConnection({
   host: "localhost",
   user: "yuktha",
-  password: "2480",
+  password: "****",
   database: "mydb"
 });
 
